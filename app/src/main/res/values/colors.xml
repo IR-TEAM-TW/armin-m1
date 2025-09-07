@@ -6,4 +6,5 @@
     <color name="gray">#CCCCCC</color>
     <color name="yellow">#D29F1B</color>
     <color name="card_background">#323232</color>
+    <color name="txt_border">#76717B</color>
 </resources>

@@ -319,10 +319,10 @@ Professionals: FREE"
             </LinearLayout>
         </ScrollView>
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@color/yellow"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent">
@@ -331,26 +331,31 @@ Professionals: FREE"
                 android:id="@+id/txt_total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:gravity="center"
                 android:minHeight="60dp"
                 android:text="Total: €44"
-                android:textSize="25sp" />
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
+                android:layout_marginRight="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:minHeight="60dp"
+                android:minHeight="50dp"
                 android:text="Checkout"
                 android:textColor="@color/yellow"
-                android:textSize="20sp"
-                app:backgroundTint="@color/background" />
+                android:textSize="15sp"
+                app:backgroundTint="@color/background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
