@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ticketing.TicketingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/your_image_view_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/museum" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#60000000" /> <!-- Semi-transparent black overlay -->
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@drawable/fade_background"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Official\nTicketing Service"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Date to visit"
+                        android:textColor="@color/yellow"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/chevron_left" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="September"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/chevron_right" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <CalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dateTextAppearance="@style/CalendarDateText"
+                    android:weekDayTextAppearance="@style/CalendarWeekDayText"
+                    android:focusedMonthDateColor="@color/yellow"
+                    android:weekSeparatorLineColor="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Number of tickets"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="50sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="General Admission"
+                            android:textColor="@color/gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="€22"
+                            android:textColor="@color/yellow"
+                            android:textSize="25sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="150dp"
+                        android:layout_height="50sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/btn_dec_normal"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="-"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/view"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/quantity_normal"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/view"
+                            app:layout_constraintEnd_toStartOf="@+id/btn_add_normal"
+                            app:layout_constraintStart_toEndOf="@+id/btn_dec_normal" />
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/btn_add_normal"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/view"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:maxWidth="150dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Under 18s, Under 26s residents of the EEA, Museum members,
+Professionals: FREE"
+                            android:textColor="@color/gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FREE"
+                            android:textColor="@color/yellow"
+                            android:textSize="25sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="150dp"
+                        android:layout_height="50sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/btn_dec_sepc"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="-"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/view2"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/quantity_spec"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/view2"
+                            app:layout_constraintEnd_toStartOf="@+id/btn_add_spec"
+                            app:layout_constraintStart_toEndOf="@+id/btn_dec_sepc" />
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/btn_add_spec"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/view2"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:text="Total: €44"
+                android:textSize="25sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:text="Checkout"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                app:backgroundTint="@color/background" />
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

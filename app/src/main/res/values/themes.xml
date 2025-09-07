@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Armin_Module_C_AM" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">@font/playfairdisplay_regular</item>
+
+    </style>
+
+    <style name="Theme.Armin_Module_C_AM" parent="Base.Theme.Armin_Module_C_AM"/>
+
+</resources>

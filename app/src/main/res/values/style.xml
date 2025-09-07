@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">140dp</item>
+        <item name="cornerSizeTopLeft">140dp</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@android:color/holo_red_dark</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+<!--        <item name="android:weekNumberColor">@android:color/holo_red_dark</item>-->
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CalendarDateText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CalendarWeekDayText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.home.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="25dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:background="@drawable/yellow_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CustomCardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardPreventCornerOverlap="false"
+                    app:strokeColor="@color/background">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/louvre" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fade_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                android:text="Experience Art"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:paddingBottom="25dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="We are thrilled to invite you to join us for an extraordinary event that will immerse you in the world of art."/>
+
+        <Button
+            android:id="@+id/btn_gallery"
+            android:layout_marginTop="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/yellow"
+            android:text="Explore Now"
+            android:textColor="@color/background"/>
+
+    </LinearLayout>
+
+</layout>
